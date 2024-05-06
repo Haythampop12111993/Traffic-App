@@ -1,0 +1,27 @@
+<div class="home">
+  <video class="video" autoplay muted>
+    <source src="assets/videoplayback.mp4" type="video/mp4" autoplay />
+  </video>
+  <div class="layer">
+    <div class="container">
+      <div>
+        <h1 class="fw-bolder">
+          مرحبا بك في نظام الادارة و المراقبة للتنظيم المروري لمدينة الاسماعيليه
+        </h1>
+        <h2 class="fw-bold">
+          مشروع تخرج تابع للفرقة الرابعة جامعة قناة السويس
+        </h2>
+        @if (!globle.isLogin) {
+        <button
+          style="margin: 30px 0"
+          class="btn btn-primary"
+          [routerLink]="['/login']"
+          routerLinkActive="router-login-active"
+        >
+          تسجيل الدخول
+        </button>
+        }
+      </div>
+    </div>
+  </div>
+</div>

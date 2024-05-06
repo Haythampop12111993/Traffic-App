@@ -1,0 +1,29 @@
+.link {
+  transition: 0.5s all;
+  border: 1px solid transparent;
+  border-right: 1px solid;
+  padding: 0 10px;
+}
+.link:hover {
+  background-color: #b4b6b8;
+  border-radius: 10px;
+  transition: 0.5s all;
+  border: 1px solid;
+}
+
+.link:nth-last-of-type(1) {
+  border-right: 1px solid transparent;
+}
+.link:hover:nth-last-of-type(1) {
+  border-right: 1px solid;
+}
+@media (max-width: 1399px) {
+  .link {
+    font-size: 12px;
+  }
+}
+@media (max-width: 992px) {
+  .link {
+    border-right: 1px solid transparent;
+  }
+}

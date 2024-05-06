@@ -1,0 +1,33 @@
+<div
+  style="
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px 0 0 0;
+    width: 280px;
+  "
+>
+  <div>
+    <img
+      style="width: 100%; height: 100%"
+      [src]="data.controlImage"
+      alt="image"
+    />
+  </div>
+  <div>
+    <button class="btn" (click)="openDialog($event)">
+      <img
+        style="
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          text-align: center;
+        "
+        [src]="image"
+        alt="
+    traffic light
+  "
+      />
+    </button>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.router-link-active {
+  background-color: #b4b6b8;
+  color: white;
+  border-radius: 10px;
+  transition: 0.5s all;
+  border: 1px solid black !important;
+}
+.router-login-active {
+  background-color: #b4b6b8;
+  color: white;
+  border-radius: 10px;
+  transition: 0.5s all;
+  border: 1px solid;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

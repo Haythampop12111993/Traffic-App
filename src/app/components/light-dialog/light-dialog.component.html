@@ -1,0 +1,22 @@
+<h2 class="text-center" mat-dialog-title>تغير اشاره المرور</h2>
+<mat-dialog-content>
+  @for (item of images; track $index) {
+  <button
+    style="margin: 0 5px; text-align: center"
+    [class]="item.class"
+    (click)="onClick(item.id)"
+  >
+    <img
+      style="width: 150px; height: 150px; object-fit: cover; text-align: center"
+      [src]="item.image"
+      alt="traffic light"
+    />
+  </button>
+  }
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onChange()">تاكيد تغير الاشارة</button>
+  <button mat-button cdkFocusInitial (click)="onNoClick()">
+    شكرا لا اريد التغيير
+  </button>
+</mat-dialog-actions>

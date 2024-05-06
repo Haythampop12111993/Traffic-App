@@ -1,0 +1,19 @@
+<div style="height: 90vh" class="">
+  <div style="height: 53%" class="overflow-auto">
+    <img
+      style="width: 100%; object-fit: cover; text-align: center"
+      src="assets/roadControlBg.jpeg"
+      alt="image"
+    />
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      @for (control of GlobleService.imagesArray ; track $index) {
+      <app-light-control
+        class="col-12 col-md-4 col-lg-2 text-center d-flex justify-content-center align-items-center"
+        [data]="control"
+      ></app-light-control>
+      }
+    </div>
+  </div>
+</div>

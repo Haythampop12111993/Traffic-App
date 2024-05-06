@@ -1,0 +1,13 @@
+.lightNotActive {
+  border: 2px solid transparent;
+  transform: 0.5s all;
+}
+.lightActive {
+  border: 2px solid green;
+  transform: 0.5s all;
+}
+@media (max-width: 768px) {
+  .btn {
+    width: 90%;
+  }
+}

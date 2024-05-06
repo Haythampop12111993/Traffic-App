@@ -1,0 +1,71 @@
+<div>
+  <div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      @for (video of roadVideoArray ; track $index) {
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center mb-3">
+        <video width="100%" height="100%" autoplay muted loop>
+          <source src="{{ video.videoPath }}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      }
+    </div>
+    <div style="margin-top: 80px" class="row">
+      <div
+        class="col-12 col-lg-4 d-flex justify-content-center align-items-center mb-5"
+      >
+        <img style="width: 350px" src="assets/download (1).svg" alt="" />
+      </div>
+      <div
+        class="col-12 col-lg-4 d-flex justify-content-center align-items-center mb-5"
+      >
+        <app-indicator></app-indicator>
+      </div>
+      <div
+        style="cursor: pointer"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        class="col-12 col-lg-4 d-flex justify-content-center align-items-center mb-5 img-hover"
+      >
+        <img
+          style="width: 100%"
+          src="assets/roadVideoControl.jpeg"
+          alt="image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <img
+          style="width: 100%"
+          src="assets/roadVideoControl.jpeg"
+          alt="image"
+        />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          غلق
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

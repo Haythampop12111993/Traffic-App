@@ -1,0 +1,161 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img
+        style="width: 50px; height: 50px; border-radius: 50%"
+        src="assets/download.jpeg"
+        alt="logo"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-lg-5 ms-lg-5">
+        @if(globle.isLogin){
+        <li
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+          "
+          class="nav-item link me-lg-3 mb-2 mb-lg-0"
+          [routerLink]="['/location']"
+          routerLinkActive="router-link-active"
+        >
+          <!-- <fa-icon [icon]="faLocationDot"></fa-icon> -->
+          <img
+            style="width: 35px"
+            src="assets/destination.png"
+            alt="location"
+          />
+          <a
+            style="font-weight: bold; padding-right: 30px"
+            class="nav-link"
+            aria-current="page"
+            >نظام التتبع</a
+          >
+        </li>
+        } @if (globle.isLogin) {
+        <li
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+          "
+          class="nav-item link me-lg-3 mb-2 mb-lg-0"
+          [routerLink]="['/trafficJam']"
+          routerLinkActive="router-link-active"
+        >
+          <img style="width: 35px" src="assets/browser.png" alt="traffic jam" />
+          <a
+            style="font-weight: bold; padding-right: 30px"
+            class="nav-link"
+            aria-current="page"
+            >بيانات الازدحام</a
+          >
+        </li>
+        } @if (globle.isLogin) {
+        <li
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+          "
+          class="nav-item link me-lg-3 mb-2 mb-lg-0"
+          [routerLink]="['/roadVideoControl']"
+          routerLinkActive="router-link-active"
+        >
+          <img
+            style="width: 50px"
+            src="assets/traffic-camera.png"
+            alt="traffic jam"
+          />
+          <a
+            style="font-weight: bold; padding-right: 30px"
+            class="nav-link"
+            aria-current="page"
+            >التنبؤ بالازدحام</a
+          >
+        </li>
+        } @if (globle.isLogin) {
+        <li
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+          "
+          class="nav-item link me-lg-3 mb-2 mb-lg-0"
+          [routerLink]="['/roadControl']"
+          routerLinkActive="router-link-active"
+        >
+          <img
+            style="width: 50px"
+            src="assets/traffic-lights (3).png"
+            alt="traffic jam"
+          />
+          <a
+            style="font-weight: bold; padding-right: 30px"
+            class="nav-link"
+            aria-current="page"
+            >نظام التحكم في الطرق</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        @if (!globle.isLogin) {
+        <li
+          style="display: flex; justify-content: center; align-items: center"
+          class="nav-item"
+        >
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/login']"
+            routerLinkActive="router-login-active"
+          >
+            تسجيل الدخول
+          </button>
+        </li>
+        } @if (globle.isLogin) {
+        <li
+          style="display: flex; justify-content: center; align-items: center"
+          class="nav-item"
+        >
+          <img
+            style="width: 50px; height: 50px; border-radius: 50%"
+            src="assets/policeman.png"
+            alt="userImage"
+          />
+        </li>
+        } @if (globle.isLogin) {
+        <li
+          style="display: flex; justify-content: center; align-items: center"
+          class="nav-item"
+        >
+          <button class="btn btn-lg btn-link" (click)="logout()">
+            تسجيل الخروج
+          </button>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
